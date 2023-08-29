@@ -1,0 +1,167 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+}
+body{
+  background: #D6EEFF;
+}
+
+.toggle{
+ font-size: 15px;
+}
+
+.drop{
+  font-size: 2rem;
+  
+}
+
+header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #D6EEFF;
+  padding: 20px 7%;
+  z-index: 1000;
+}
+.navbar ul li .btn{
+  font-family: SF UI Display;
+  padding: 16px 24px;
+  font-size: 20px;
+  background: #5693BF;
+  color: var(--white, #FFF);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; 
+  border: none;
+  border-radius: 77px;
+}
+
+.navbar ul li .btn:hover{
+  font-family: SF UI Display;
+  padding: 16px 24px;
+  font-size: 20px;
+  background: #5693BF;
+  color: var(--white, #FFF);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; 
+  border: none;
+  border-radius: 77px;
+}
+
+header .navbar ul li{
+  position: relative;
+  float: left;
+  list-style: none;
+}
+
+header .navbar ul li a{
+  display: block;
+  font-family: SF UI Display;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  font-size: 20px;
+  padding: 20px;
+  color: #224259;
+  margin: 0 20px 0;
+}
+
+header .navbar ul li a:hover{
+  background: #7f8c8d;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s;
+  box-shadow: 0 0 6px black;
+}
+
+header .navbar ul li ul{
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #d2dae2;
+  border-radius: 30px;
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+  border-top: 1px solid #ff54101a;
+}
+
+header .navbar ul li ul li ul{
+  left: 200px;
+  top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#menu-bar{
+  display: none;
+}
+
+header label{
+  display: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+
+/* Responsive */
+@media (max-width:1280px){
+  header{
+    padding: 20px;
+   
+  }
+
+
+  header label{
+    display: initial;
+  }
+
+  header .navbar{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+  }
+
+  header .navbar ul li{
+    width: 100%;
+  }
+
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+  }
+
+  header .navbar ul li ul li{
+    background: #CAD3C8;
+    color: white;
+  }
+
+  header .navbar ul li ul li ul{
+    width: 100%;
+    left: 0;
+  }
+
+  #menu-bar:checked ~ .navbar{
+    display: initial;
+  }
+}
